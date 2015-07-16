@@ -20,3 +20,4 @@ Physics2DSettings:
   m_RaycastsHitTriggers: 1
   m_DeleteStopsCallbacks: 1
   m_LayerCollisionMatrix: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+#that's a lot of ffffs...
