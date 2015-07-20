@@ -24,6 +24,9 @@ public class Runner : MonoBehaviour {
 	}
 	
 	void Update () {
+		 void Awake() {
+        DontDestroyOnLoad(transform.Runner);
+    }
 		transform.Rotate(rotationVelocity * Time.deltaTime);
 		if (Input.GetButtonDown ("Jump")) {
 					if (touchingPlatform) {
