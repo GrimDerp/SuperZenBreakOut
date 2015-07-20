@@ -1,3 +1,6 @@
+//This was made following the excellent runner tutorial by cat like coding ( catlikecoding.com) 
+//and concepts by Drakfyre (pushy pixels on youtube.) 
+//lil stuff by me (GrimDerp)
 using UnityEngine;
 
 public class Runner : MonoBehaviour {
