@@ -17,6 +17,10 @@ public class Runner : MonoBehaviour {
 	private Vector3 startPosition;
 
 	private static int boosts;
+	
+	void Awake(){
+        DontDestroyOnLoad(transform.Runner);
+	 }
 
 	void OnCollisionEnter(){
 		touchingPlatform = true;
@@ -26,10 +30,6 @@ public class Runner : MonoBehaviour {
 		touchingPlatform = false;
 	}
 	
-	
-	void Awake(){
-        DontDestroyOnLoad(transform.Runner);
-	 }
 	
 	void Update () {
 		transform.Rotate(rotationVelocity * Time.deltaTime);
