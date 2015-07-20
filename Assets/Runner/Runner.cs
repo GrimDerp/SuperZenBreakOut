@@ -2,6 +2,8 @@
 //and concepts by Drakfyre (pushy pixels on youtube.) 
 //lil stuff by me (GrimDerp)
 using UnityEngine;
+using MonoBehavior;
+using UnityENgine.EventSystems;
 using UnityStandardAssets.ImageEffects;
 
 public class Runner : MonoBehaviour {
