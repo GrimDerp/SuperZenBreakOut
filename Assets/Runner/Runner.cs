@@ -13,7 +13,7 @@ public class Runner : MonoBehaviour {
 	public Vector3 boostVelocity, jumpVelocity;
 	public float acceleration;
 	public float gameOverY;
-	private bool touchingPlatform;
+	private bool touchingPlatform, IsGUIVisible;
 	private Vector3 startPosition;
 
 	private static int boosts;
