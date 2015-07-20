@@ -24,10 +24,12 @@ public class Runner : MonoBehaviour {
 		touchingPlatform = false;
 	}
 	
-	void Update () {
-		 void Awake() {
+	
+	void Awake(){
         DontDestroyOnLoad(transform.Runner);
-    }
+	 }
+	
+	void Update () {
 		transform.Rotate(rotationVelocity * Time.deltaTime);
 		if (Input.GetButtonDown ("Jump")) {
 					if (touchingPlatform) {
