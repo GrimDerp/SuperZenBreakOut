@@ -1,16 +1,12 @@
 using UnityEngine;
 using System.Collections;
-
-namespace Completed
-{
-    using System.Collections.Generic;       //Allows us to use Lists. 
+using System.Collections.Generic;       //Allows us to use Lists. Lists are awesome. 
     
-    public class GameManager : MonoBehaviour
-    {
+public class GameManager : MonoBehaviour {
 
-        public static GameManager instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
-        private BoardManager boardScript;                       //Store a reference to our BoardManager which will set up the level.
-        private int level = 3;                                  //Current level number, expressed in game as "Day 1".
+        public static GameManager instance = null;      //Static instance of GameManager which allows it to be accessed by any other script.
+        private BoardManager boardScript;               //Store a reference to our BoardManager which will set up the level.
+        private int level = 3;                          //Current level number, expressed in game as "Day 1".
 
         //Awake is always called before any Start functions
         void Awake()
@@ -25,10 +21,10 @@ namespace Completed
             else if (instance != this)
                 
                 //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
-                Destroy(gameObject);    
+                Destroy(gameObject);  //probably a good thing. rogue managers et al  
             
             //Sets this to not be destroyed when reloading scene
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); //which fixes a major crash!
             
             //Get a component reference to the attached BoardManager script
             boardScript = GetComponent<BoardManager>();
@@ -52,4 +48,4 @@ namespace Completed
         {
             
         }
-}
+
