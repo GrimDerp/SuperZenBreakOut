@@ -1,0 +1,13 @@
+using UnityEngine;
+
+public class MazeCell : MonoBehaviour {
+
+//We need a 3D visualization for our cells. Create a new game object named Maze Cell and add the MazeCell component to it.
+//Then create a default quad object, make it a child of the cell and set its rotation to (90,0,0). 
+//That gives us a very simple floor tile that fills the cell's area. 
+//Turn the whole thing into a prefab, get rid of the instance, and give Maze a reference to it.
+
+
+
+
+}
