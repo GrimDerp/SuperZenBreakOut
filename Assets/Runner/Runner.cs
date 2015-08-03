@@ -19,6 +19,7 @@ public class Runner : MonoBehaviour {
 	private static int boosts;
 	
 	void Awake(){
+		//this should fix the no input within 30 seconds crash the game bug...
         DontDestroyOnLoad(transform.Runner);
 	 }
 
