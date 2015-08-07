@@ -1,0 +1,11 @@
+using UnityEngine;
+// turn it into a prefab
+public class VoxelMap : MonoBehaviour {
+
+	public float size = 2f;
+
+	public int voxelResolution = 8;
+	public int chunkResolution = 2;
+
+	public VoxelGrid voxelGridPrefab;
+}
