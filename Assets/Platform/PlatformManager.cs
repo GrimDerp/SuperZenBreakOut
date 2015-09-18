@@ -58,3 +58,4 @@ public class PlatformManager : MonoBehaviour {
 		}
 	}
 }
+//btw this is one of the only core pieces here that really actually works. Thanks Catlike coding!
