@@ -6,3 +6,4 @@ NetworkManager:
   m_DebugLevel: 0
   m_Sendrate: 15
   m_AssetToPrefab: {}
+  # I dont like the nayout in github as much as i liked the old one.
