@@ -1,5 +1,5 @@
 function (
-  
+  //DontDestroyOnLoad(transform.gameObject); works occasionally
   a,  // current board
   b,  // current block
   c,  // current position
