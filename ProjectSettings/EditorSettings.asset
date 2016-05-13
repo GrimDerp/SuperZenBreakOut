@@ -3,6 +3,7 @@
 --- !u!159 &1
 EditorSettings:
   m_ObjectHideFlags: 0
+  #magnets: how do they work?
   serializedVersion: 3
   m_ExternalVersionControlSupport: Visible Meta Files
   m_SerializationMode: 2
