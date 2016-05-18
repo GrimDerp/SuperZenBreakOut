@@ -43,4 +43,5 @@ public class Done_DestroyByContact : MonoBehaviour
 		Destroy (other.gameObject);
 		Destroy (gameObject);
 	}
+	//this is how we do it
 }
