@@ -5,7 +5,7 @@ public class Done_BGScroller : MonoBehaviour
 {
 	public float scrollSpeed;
 	public float tileSizeZ;
-
+//yesyes let the hate flow through you
 	private Vector3 startPosition;
 
 	void Start ()
