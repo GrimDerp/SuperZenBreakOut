@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
                 
                 //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
                 Destroy(gameObject);  //probably a good thing. rogue managers et al  
-            
+            //turns out that something around in here is responsible for breaking things if no action is taken within 30 seconds of launch...
             //Sets this to not be destroyed when reloading scene
             DontDestroyOnLoad(gameObject); //which fixes a major crash!
             
