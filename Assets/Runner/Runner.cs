@@ -20,6 +20,7 @@ public class Runner : MonoBehaviour {
 	
 	void Awake(){
 		//this should fix the no input within 30 seconds crash the game bug...
+		//six months later: it is *supposed* to fix the creash on launch bug...
         DontDestroyOnLoad(transform.Runner);
 	 }
 
