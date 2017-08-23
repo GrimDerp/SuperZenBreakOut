@@ -1,0 +1,25 @@
+//func. to write individual pixels to an 800x600 bitmap
+func setPixel(x: Int, y: Int, r: Float, g: Float, b: Float, a: Float)
+//This changes the pixel at bitmap coordinates (x, y) to the color (r, g, b, a)
+
+---------------------------
+// 3 triangles with 3 vertices each:
+//(vector 3&4 should probably be used here...)
+struct Vertex {
+  var x: Float = 0   // coordinate in 3D space
+  var y: Float = 0
+  var z: Float = 0
+
+  var r: Float = 0   // color
+  var g: Float = 0
+  var b: Float = 0
+  var a: Float = 1
+
+  var nx: Float = 0  // normal vector (using for lighting)
+  var ny: Float = 0
+  var nz: Float = 0
+}
+
+struct Triangle {
+  var vertices = [Vertex](repeating: Vertex(), count: 3)
+}
