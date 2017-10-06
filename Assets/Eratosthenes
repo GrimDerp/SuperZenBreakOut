@@ -1,0 +1,47 @@
+The Sieve of Eratosthenes 
+in Python - 2015/05/24
+
+http://upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif
+Sieve of Eratosthenes animation 
+Source: Wikipedia[0]
+One of the things we need to do when finding Perrin Pseudo-Primes is to recognise prime numbers so we can see if the numbers predicted by the Perrin test to be prime, are. So we need to generate primes. For small primes (for some definition of "small") this can be done quickly and efficiently by using the Sieve of Eratosthenes. In our case, instead of using a bit map of flags, we will use a dynamically generated collection of filters, one for each prime, and run down the list of all numbers, filtering as we go.
+
+
+The basic algorithm
+
+So how does the Sieve of Eratosthenes work? We start by writing a flag for every number from 2 up to the limit we're interesting in.
+
+We set these flags as follows:
+
+True $\rightarrow$ Prime as far as we know
+False $\rightarrow$ Definitely Composite.
+We initialise all the flags to True.
+ 
+#!/usr/bin/python
+
+limit = 121
+
+flags = {}
+for i in range(2,limit+1):
+    flags[i] = True
+
+p = 2
+while p <= limit:
+
+    if flags[p] == True:
+        print p
+        m = p*p
+        while m <= limit:
+            flags[m] = False
+            m += p
+
+    p += 1
+Now we look for the first number not known to be composite. In other words, we look for the first flag that's True. To start with we know this will be 2 - there's no mystery there. This is definitely prime, so we call it $p,$ and print it. Then we start at $p^2$ and move forward in steps of size $p,$ setting flags to False. The point is that we are stepping through the multiples of $p,$ which are therefore definitely composite.
+
+Now we move to the next number and go again. If its flag is True then the number is prime, so we print it, and step forward setting the flags for its multiples.
+
+At each stage we know that every composite number up to $p^2$ has definitely been marked as such. So the next unmarked number is always going to be prime, so we call that $p,$ print it, mark all its multiples, and so on.
+
+An important feature of this algorithm is that it doesn't need us to do any division. Until comparatively recently routines called the "Sieve of Eratosthenes" actually used trial division, and so weren't the original algorithm at all. We can see here though that division is not necessary.
+
+The difficulty, however, is that we need to start by initialising a flag for every number up to the limit we're interesting in. If we don't know how far we're going to go, or if we're limited on space, this is a problem. However, we can overcome both these problems by using a more dynamic version.
