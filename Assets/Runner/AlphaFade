@@ -1,0 +1,7 @@
+var fadeAlpha : float = 0;
+function FadeIn(seconds : float){ 
+ while(fadeAlpha != 1){ 
+ fadeAlpha = Mathf.MoveTowards(fadeAlpha, 1, Time.deltaTime*(1/seconds)); 
+ yield; 
+ }
+}
