@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-
+//this will create a manager thing to generate skyline backGround objects
 public class SkylineManager : MonoBehaviour {
 	
 	public Transform prefab;
