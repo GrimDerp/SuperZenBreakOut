@@ -29,7 +29,8 @@ public class SkylineManager : MonoBehaviour {
 	}
 	
 	public Vector3 minSize, maxSize;
-	
+
+	//get rid of & reuse 
 	private void Recycle () {
 		Vector3 scale = new Vector3(
 			Random.Range(minSize.x, maxSize.x),
